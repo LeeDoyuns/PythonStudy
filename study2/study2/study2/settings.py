@@ -103,7 +103,14 @@ DATABASES = {
     
     #새로운 DB 추가. postgresql
     # 'postgresql': {
-  
+   'default': {    
+        'NAME': 'test',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'test',
+        'PASSWORD': '0000',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
 }
 
 
