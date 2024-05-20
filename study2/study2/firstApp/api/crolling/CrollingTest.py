@@ -9,9 +9,8 @@ from ...models import Question
 
 
 
-#내부망 이슈로 테스트 못함.....
 @api_view(['GET'])
-def colTest(req): 
+def weatherTest(req): 
     html = requests.get('https://search.naver.com/search.naver?query=날씨', verify=False) 
     # pprint(html.text)
     
@@ -37,3 +36,14 @@ def colTest(req):
 
     #json_dumps_params={'ensure_ascii':False} 한글이 아스키코드로 response되는 경우 해당 파라미터를 추가하면 해결됨
     return JsonResponse(responseData, safe=False, json_dumps_params={'ensure_ascii':False}, status = status.HTTP_200_OK)
+
+
+#내부망 이슈..테스트 불가
+@api_view(['GET'])
+def webtoonTitleTest(req): 
+    html = requests.get('http://comic.naver.com/webtoon/weekday.nhn')
+    soup = bs(html.text, 'html.parser')
+    html.close()
+    
+    webtoonHtml = soup.find('div', {'class': 'col_inner'})
+    pprint(webtoonHtml)

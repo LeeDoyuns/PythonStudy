@@ -1,0 +1,6 @@
+from selenium import webdriver
+import time
+
+# //*[@id="thumbnail-container"]
+
+driver = webdriver.Chrome('chromedriver')
