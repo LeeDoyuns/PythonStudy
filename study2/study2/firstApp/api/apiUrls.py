@@ -1,8 +1,9 @@
 from django.urls import path
 from .crolling.CrollingTest import *
+from .automation.WebAutomation import *
 
 
 urlpatterns = [
     path('weatherTest', weatherTest),
-    path('webtoonTitleTest', webtoonTitleTest)
+    path('seleniumTest1', seleniumTest1),
 ]

@@ -16,7 +16,6 @@ INSTALLED_APPS = [
     'firstApp.apps.FirstappConfig',
     'rest_framework',
     'corsheaders',
-    # 'selenium'
 ]
 
 MIDDLEWARE = [
