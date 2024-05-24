@@ -9,8 +9,8 @@ def read_json(filePath):
             data = json.load(file)
             return data
     except FileNotFoundError:
-        print(f"Error: The file at {file_path} does not exist.")
+        print(f"Error: The file at {filePath} does not exist.")
         raise
     except json.JSONDecodeError:
-        print(f"Error: The file at {file_path} is not a valid JSON.")
+        print(f"Error: The file at {filePath} is not a valid JSON.")
         raise
